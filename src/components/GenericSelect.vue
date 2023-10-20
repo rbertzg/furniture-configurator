@@ -1,9 +1,12 @@
 <template>
-  <label>
-    <span>
+  <label class="flex gap-2 items-center justify-center">
+    <span class="font-bold text-lg text-sky-600">
       {{ label }}
     </span>
-    <select v-model="value">
+    <select
+      v-model="value"
+      class="bg-sky-100 rounded p-1"
+    >
       <option
         v-for="option in options"
         :key="option.id"
@@ -19,7 +22,7 @@
 import { computed } from 'vue'
 
 export type OptionProps = {
-  id: string
+  id: string | number
   name: string
 }
 
